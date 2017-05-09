@@ -13,15 +13,17 @@ yum_repository 'nginx' do
 end
 
 package 'nginx'
+package 'sqlite-devel'
+package 'nodejs'
 
 
 # Install ruby 2.4.0
-include_recipe "ruby_rbenv::system"
-include_recipe "ruby_build::default"
+include_recipe 'ruby_rbenv::system'
+include_recipe 'ruby_build::default'
 
-rbenv_ruby "2.4.0"
-rbenv_global "2.4.0"
+rbenv_ruby '2.4.0'
+rbenv_global '2.4.0'
 
 
 # Install Puma
-rbenv_gem "puma"
+rbenv_gem 'puma'
