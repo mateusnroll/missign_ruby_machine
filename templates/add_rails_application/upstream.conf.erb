@@ -1,0 +1,3 @@
+upstream <%= @app_name %> {
+    server unix:<%= @app_socket_path %>;
+}
