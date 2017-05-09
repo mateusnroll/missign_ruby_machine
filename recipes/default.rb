@@ -13,6 +13,9 @@ yum_repository 'nginx' do
 end
 
 package 'nginx'
+
+# Install yum dependencies
+package 'epel-release'
 package 'sqlite-devel'
 package 'nodejs'
 
