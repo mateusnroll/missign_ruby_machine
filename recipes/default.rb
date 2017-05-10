@@ -30,7 +30,7 @@ end
 
 package 'nginx'
 
-include_recipe 'configure_nginx'
+include_recipe 'missing_ruby_machine::configure_nginx'
 
 # Install yum dependencies
 package 'epel-release'

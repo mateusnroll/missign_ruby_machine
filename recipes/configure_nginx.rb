@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: missing_ruby_machine
-# Recipe:: add_rails_application
+# Recipe:: configure_nginx
 #
 # Copyright (c) 2017 The Authors, All Rights Reserved.
 
