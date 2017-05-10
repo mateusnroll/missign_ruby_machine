@@ -1,0 +1,7 @@
+{
+	"rails_application": {
+		"app_name": "name",
+		"app_location": "/",
+		"app_socket_path": "/tmp/sockets/name.sock"
+	}
+}

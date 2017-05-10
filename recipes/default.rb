@@ -30,6 +30,8 @@ end
 
 package 'nginx'
 
+include_recipe 'configure_nginx'
+
 # Install yum dependencies
 package 'epel-release'
 package 'sqlite-devel'
