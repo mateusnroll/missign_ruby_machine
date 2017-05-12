@@ -52,3 +52,6 @@ rbenv_gem 'puma'
 # Install rails and bundler
 rbenv_gem 'rails'
 rbenv_gem 'bundler'
+
+# Monitor with monit
+include_recipe 'missing_ruby_machine::monit'

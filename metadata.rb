@@ -15,3 +15,4 @@ issues_url 'https://github.com/mateusnroll/missing_ruby_machine/issues' if respo
 source_url 'https://github.com/mateusnroll/missing_ruby_machine' if respond_to?(:source_url)
 
 depends 'ruby_rbenv'
+depends 'poise-monit'

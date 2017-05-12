@@ -1,0 +1,3 @@
+check process <%= @process_name %> with pidfile <%= @pid_file %>
+    start program = "/bin/systemctl start <%= @process_name %>"
+    stop program = "/bin/systemctl stop <%= @process_name %>"
