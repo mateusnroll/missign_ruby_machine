@@ -4,8 +4,6 @@ property :location, String, required: true
 property :socket_path, String, required: true
 
 action :create do
-	p location
-
 	# Configure nginx
 	template "/etc/nginx/conf.d/locations/#{app_name}.conf" do
 		source 'nginx/location.conf.erb'
