@@ -4,6 +4,8 @@
 #
 # Copyright (c) 2017 The Authors, All Rights Reserved.
 
+
+# Install and configure monit
 include_recipe 'poise-monit::default'
 
 link '/etc/monitrc' do
@@ -22,4 +24,16 @@ end
 
 service 'monit' do
 	action :reload
+end
+
+
+# Add monit as a resource on nginx
+template "/etc/nginx/conf.d/locations/monit.conf" do
+	source 'nginx/location.conf.erb'
+	variables(:app_name => 'monit', :app_location => 'monit')
+end
+
+template "/etc/nginx/conf.d/upstreams/monit.conf" do
+	source 'nginx/upstream.conf.erb'
+	variables(:app_name => 'monit', :app_socket_path => '/var/run/monit.sock')
 end
