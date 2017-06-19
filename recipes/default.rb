@@ -42,8 +42,8 @@ package 'nodejs'
 include_recipe 'ruby_rbenv::system'
 include_recipe 'ruby_build::default'
 
-rbenv_ruby '2.4.0'
-rbenv_global '2.4.0'
+rbenv_ruby '2.4.1'
+rbenv_global '2.4.1'
 
 
 # Install Puma
